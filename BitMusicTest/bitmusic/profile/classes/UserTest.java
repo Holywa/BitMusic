@@ -22,7 +22,7 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author Jérémy, Fabien
+ * @author Jérémy
  */
 public class UserTest {
 	private static final String   LOGIN      = "login";
@@ -66,27 +66,6 @@ public class UserTest {
         }
         assertEquals(newLogin, user.getLogin());
     }
-    
-     /**
-     * @throws ProfileExceptions
-     */
-    @Test(expected = ProfileExceptions.class)
-    public void testSetLoginEmptyName() throws ProfileExceptions {
-        System.out.println("setLogin");
-        String log = "";
-        user.setLogin(log);
-    }
-    
-    /**
-     * @throws ProfileExceptions
-     */
-
-    @Test(expected = ProfileExceptions.class)
-    public void testSetLoginNullName() throws ProfileExceptions {
-        System.out.println("setLogin");
-        String log = null;
-        user.setLogin(log);
-    }
 
     /**
      * Test of getPassword method, of class User.
@@ -111,16 +90,6 @@ public class UserTest {
             Logger.getLogger(UserTest.class.getName()).log(Level.SEVERE, null, ex);
         }
         assertEquals(newPassword, user.getPassword());
-    }
-    
-     /**
-     * @throws ProfileExceptions
-     */
-    @Test(expected = ProfileExceptions.class)
-    public void testPasswordEmptyName() throws ProfileExceptions {
-        System.out.println("setPassword");
-        String pw = "";
-        user.setPassword(pw);
     }
 
     /**
