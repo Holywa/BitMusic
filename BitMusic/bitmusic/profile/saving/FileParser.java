@@ -88,7 +88,7 @@ public class FileParser {
         } catch (IOException ex) {
             Logger.getLogger(FileParser.class.getName()).log(Level.SEVERE, null, ex);
         }
-        throw new ProfileExceptions("User not found on computer");
+        return null;
     }
 
     public boolean readAuthFile(String path, String pwd) throws ProfileExceptions {
